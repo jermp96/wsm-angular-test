@@ -1,0 +1,9 @@
+@use "../settings/variables";
+
+html, body { height: 100%; }
+body {
+    color: variables.$font-body-color;
+    font-size: variables.$fs-body;
+    margin: 0;
+    font-family: variables.$f-family;
+}
