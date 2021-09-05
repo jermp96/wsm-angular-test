@@ -1,0 +1,8 @@
+@use "../settings/variables";
+.text-blue{
+    color: variables.$ws_blue500!important;
+}
+
+.text-blue400{
+    color: variables.$ws_blue400!important;
+}
