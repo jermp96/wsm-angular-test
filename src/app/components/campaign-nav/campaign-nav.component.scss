@@ -1,0 +1,15 @@
+.campaing-nav{
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &-item{
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+}
+
+.opacity50{
+    opacity: 50%;
+}
