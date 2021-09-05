@@ -1,0 +1,6 @@
+<mat-selection-list (selectionChange)="onItemSelected(items.selectedOptions.selected[0]?.value)" #items [multiple]="false">
+    <mat-list-option  *ngFor="let itm of navItems" [value]="itm">
+      {{itm?.name}}
+    </mat-list-option>
+</mat-selection-list>
+

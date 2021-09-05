@@ -1,0 +1,22 @@
+<section class="item-content-box">
+    <h2>Instructions</h2>
+    <div class="item-content-description" [innerHTML]="_item?.itemVariants[0].description"></div>
+    
+    <h2>Optimization</h2>
+
+    <mat-expansion-panel *ngFor="let action of _item?.actions">
+        
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <div class="pt-3 pb-3 pl-2">
+                <mat-checkbox (click)="onChangeSelectedActions($event)" class="mr-1"></mat-checkbox>  
+                {{action.name}}
+            </div>  
+          
+          </mat-panel-title>
+          
+        </mat-expansion-panel-header>
+        <div [innerHTML]="action.actionVariants[0].description"></div>
+    </mat-expansion-panel>
+</section>
+

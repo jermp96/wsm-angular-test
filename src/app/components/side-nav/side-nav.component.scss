@@ -1,0 +1,7 @@
+@use "../../../styles/settings/variables";
+
+.mat-list-single-selected-option{
+    background: white!important;
+    box-shadow: -4px 5px 8px 0 rgb(0 0 0 / 3%)!important;
+    border-left: 0.2rem solid variables.$ws_blue200!important;
+  }
