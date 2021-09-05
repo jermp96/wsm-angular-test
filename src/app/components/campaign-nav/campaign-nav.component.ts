@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { combineLatest } from 'rxjs';
 import { Campaign } from 'src/app/models/Campaign.model';
 import { CampaignGroup } from 'src/app/models/CampaignGroup.model';
+import { BtnEnableStService } from 'src/app/shared/services/singleton/btn-enable-st.service';
 import { CampaignNavService } from './campaign-nav.service';
 
 @Component({
@@ -15,8 +16,13 @@ export class CampaignNavComponent implements OnInit {
     public campaignGroup: CampaignGroup;
     public campaign: Campaign;
     public campaingsCount: number;
+    public enabledContinue: boolean;
 
-    constructor(private campaignNavService: CampaignNavService) { }
+    constructor(
+        private campaignNavService: CampaignNavService,
+        private _btnEnableStService: BtnEnableStService) {
+            this.setContinueState();
+         }
 
     ngOnInit() { 
         this.getData();
@@ -34,5 +40,14 @@ export class CampaignNavComponent implements OnInit {
                     this.campaingsCount = campaigns.length;
                 }
             })
+    }
+
+    setContinueState() {
+        this._btnEnableStService.getStatus()
+            .subscribe(
+                res => {
+                    this.enabledContinue = res;
+                }
+            );
     }
 }

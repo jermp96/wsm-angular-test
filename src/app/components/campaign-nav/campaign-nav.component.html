@@ -11,5 +11,5 @@
         <span class="opacity50">ACCOUNT PROGRESS</span>
         <span>0 out of {{campaingsCount}} Campaigns Analyzed</span>
     </div>
-    <button mat-raised-button color="primary">Continue</button>
+    <button [disabled]="!enabledContinue" mat-raised-button color="primary">Continue</button>
 </div>

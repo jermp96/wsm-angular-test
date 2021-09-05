@@ -16,5 +16,6 @@ export class ItemVariant {
 
 export class ActionVariant {
     name: string;
-    actionsVariant: ItemVariant
+    actionsVariant: ItemVariant;
+    active: boolean;
 }

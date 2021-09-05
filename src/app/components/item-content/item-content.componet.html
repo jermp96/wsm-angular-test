@@ -9,7 +9,7 @@
         <mat-expansion-panel-header>
           <mat-panel-title>
             <div class="pt-3 pb-3 pl-2">
-                <mat-checkbox (click)="onChangeSelectedActions($event)" class="mr-1"></mat-checkbox>  
+                <mat-checkbox [(ngModel)]="action.active" (change) ="onChangeSelectedActions(_item?.actions)" (click)="onStopPropagation($event)" class="mr-1"></mat-checkbox>  
                 {{action.name}}
             </div>  
           

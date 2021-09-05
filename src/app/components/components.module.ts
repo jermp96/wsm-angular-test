@@ -8,6 +8,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { ItemContentComponent } from './item-content/item-content.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { CampaignNavComponent } from './campaign-nav/campaign-nav.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     imports: [
@@ -15,7 +16,8 @@ import { CampaignNavComponent } from './campaign-nav/campaign-nav.component';
         MatListModule,
         MatExpansionModule,
         MatCheckboxModule,
-        MatButtonModule
+        MatButtonModule,
+        FormsModule
     ],
     exports: [
         SideNavComponent,
