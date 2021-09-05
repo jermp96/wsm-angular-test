@@ -1,6 +1,12 @@
-<mat-selection-list (selectionChange)="onItemSelected(items.selectedOptions.selected[0]?.value)" #items [multiple]="false">
-    <mat-list-option  *ngFor="let itm of navItems" [value]="itm">
+<div class="title-navbar text-center">
+  <p class="mb-0 text-muted">Scenario selected</p>
+  <h2 class="mt-0">High CPA</h2>
+</div>
+<mat-selection-list (selectionChange)="onItemSelected(items.selectedOptions.selected[0]?.value)" #items [multiple]="false"> 
+   <mat-list-option  *ngFor="let itm of navItems" [value]="itm">
+     <span class="span-text">
       {{itm?.name}}
+     </span>
     </mat-list-option>
 </mat-selection-list>
 

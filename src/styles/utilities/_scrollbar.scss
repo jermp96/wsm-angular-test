@@ -1,0 +1,21 @@
+@use "../settings/variables";
+.scrollbar-blue{
+    &::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+       
+      /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: variables.$ws_blue400; 
+      }
+      
+      /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+}

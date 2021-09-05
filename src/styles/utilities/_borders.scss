@@ -1,0 +1,8 @@
+@use "../settings/variables";
+
+.border-component-10{
+    width: 3rem;
+    background: variables.$ws_blue400;
+    height: 0.05rem;
+    margin-top: 0.1rem;
+}
